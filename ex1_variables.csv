@@ -1,0 +1,14 @@
+column_in_data_file,fred_mnemonic,description,transformation
+y,-,Simulated quarterly GDP growth. It is built from the real predictors listed below and is not the FRED series GDPC1.,Target variable
+PAYEMS,PAYEMS,"All employees, total nonfarm payrolls","Quarterly growth rate in logs, standardised"
+INDPRO,INDPRO,"Industrial production, total index","Quarterly growth rate in logs, standardised"
+HOUST,HOUST,"Housing starts, total new privately owned","Quarterly growth rate in logs, standardised"
+UNRATE,UNRATE,Civilian unemployment rate,"Change from the previous quarter, standardised"
+CUMFNS,CUMFNS,Capacity utilisation: manufacturing,"Level, standardised"
+PERMIT,PERMIT,New private housing units authorised by building permits,"Quarterly growth rate in logs, standardised"
+AWHMAN,AWHMAN,"Average weekly hours, manufacturing","Level, standardised"
+CLAIMSx,CLAIMSx,Initial claims for unemployment insurance,"Quarterly growth rate in logs, standardised"
+GS10TB3Mx,GS10TB3Mx,Term spread: 10-year Treasury minus 3-month bill,"Level, standardised"
+BAA10YM,BAA10YM,Credit spread: Baa yield minus 10-year Treasury yield,"Level, standardised"
+S_P500,S&P 500,S&P 500 composite stock price index,"Quarterly growth rate in logs, standardised"
+M2REAL,M2REAL,Real M2 money stock,"Quarterly growth rate in logs, standardised"
