@@ -62,7 +62,7 @@ best_aic_row = res_df.loc[res_df["aic"].idxmin()]
 
 # Print the best feature sets selected by BIC and AIC along with their scores
 print("=== BEST BIC MODEL ===")
-print(f"Number of features (k): {best_bic_row['k']}")c
+print(f"Number of features (k): {best_bic_row['k']}")
 # Create the required two-column prediction file
 submission = pd.DataFrame({
     "id": test["id"],
