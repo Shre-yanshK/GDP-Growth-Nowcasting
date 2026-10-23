@@ -2,31 +2,29 @@
 
 ## Project Overview
 
-This project investigates how statistical modelling techniques can be used to predict GDP growth using a set of economic indicators. The analysis compares alternative Ordinary Least Squares (OLS) regression models and examines how model selection criteria can help identify a more parsimonious and predictive specification.
+This project explores the prediction of GDP growth using economic indicators and statistical modelling techniques. It compares alternative Ordinary Least Squares (OLS) regression models and examines how information criteria can support model selection and predictive performance.
 
-The project was completed as part of the **Statistical Machine Learning (ECON5129)** course at the University of Glasgow.
+Completed as part of the **Statistical Machine Learning (ECON5129)** course at the University of Glasgow, the project applies exhaustive best subset selection and evaluates alternative model specifications using mean squared error (MSE).
 
-**Note:** The dataset used in this exercise is simulated and should not be interpreted as real-world economic data.
+**Note:** The dataset used in this exercise is simulated.
 
 ## Objectives
 
 - Explore the relationship between economic indicators and GDP growth.
 - Implement OLS regression for prediction.
-- Apply exhaustive best subset selection to compare alternative predictor combinations.
-- Use Akaike Information Criterion (AIC) and Bayesian Information Criterion (BIC) to select models.
-- Evaluate predictive performance using mean squared error (MSE).
-- Compare model complexity with out-of-sample predictive performance.
+- Apply exhaustive best subset selection across alternative predictor combinations.
+- Compare models selected using Akaike Information Criterion (AIC) and Bayesian Information Criterion (BIC).
+- Evaluate predictive performance using mean squared error.
+- Examine the trade-off between model complexity and predictive accuracy.
 
 ## Methodology
 
-The analysis follows these main steps:
-
-1. **Data preparation:** Load the training and test datasets and examine the available economic indicators.
-2. **Baseline modelling:** Estimate an OLS regression using the available predictors.
-3. **Best subset selection:** Evaluate alternative combinations of predictors to identify candidate models.
-4. **Model selection:** Compare specifications selected using AIC and BIC.
-5. **Model evaluation:** Assess predictive performance using mean squared error (MSE).
-6. **Model comparison:** Examine the trade-off between model complexity and predictive accuracy.
+1. **Data preparation:** Load and examine the training and test datasets.
+2. **OLS regression:** Estimate a full regression model using the available predictors.
+3. **Best subset selection:** Evaluate alternative combinations of predictors.
+4. **Model selection:** Identify candidate specifications using AIC and BIC.
+5. **Predictive evaluation:** Compare model performance using MSE.
+6. **Final model:** Use the selected BIC specification to generate predictions for the test dataset.
 
 ## Key Results
 
@@ -36,43 +34,27 @@ The analysis follows these main steps:
 | AIC-selected model | 6 | 0.3463 |
 | BIC-selected model | 3 | 0.3295 |
 
-The BIC-selected model achieved the lowest reported validation MSE among the three specifications, while using only three predictors. This illustrates how a more parsimonious model can outperform a larger specification in predictive evaluation.
-
-These results relate to the simulated dataset used in the exercise and should not be interpreted as evidence of real-world GDP forecasting performance.
+The BIC-selected model achieved the lowest reported validation MSE among the three specifications while using only three predictors. This highlights the importance of considering both model complexity and predictive performance when selecting a statistical model.
 
 ## Tools and Techniques
 
-- **Language:** Python
-- **Environment:** Jupyter Notebook
+- **Programming language:** Python
+- **Development environment:** Google Colab
 - **Statistical modelling:** Ordinary Least Squares (OLS) regression
-- **Model selection:** Exhaustive best subset selection, AIC and BIC
-- **Evaluation:** Mean squared error (MSE)
-- **Data handling and analysis:** Python data analysis libraries
+- **Feature selection:** Exhaustive best subset selection
+- **Model selection:** AIC and BIC
+- **Model evaluation:** Mean squared error (MSE)
+- **Data analysis:** Pandas, NumPy, Statsmodels and Scikit-learn
 
 ## Repository Structure
 
-```text
-GDP-Growth-Nowcasting/
-├── README.md
-├── GDP_Growth_Nowcasting.ipynb
-├── ex1_train.csv
-├── ex1_test.csv
-└── ex1_variables.csv
-```
-
-## How to Run
-
-1. Clone or download this repository.
-2. Install Python and Jupyter Notebook.
-3. Install the Python libraries required by the notebook.
-4. Open `GDP_Growth_Nowcasting.ipynb` in Jupyter Notebook.
-5. Run the notebook cells in order.
-
-The CSV files required for the analysis are included in this repository.
-
-## Limitations
-
-The dataset is simulated, so the results do not establish how the selected model would perform on actual economic data. In addition, model-selection and validation procedures should be designed carefully to avoid information leakage and overly optimistic performance estimates.
+| File | Description |
+|---|---|
+| `README.md` | Project overview, objectives, methodology, results and tools used. |
+| `gdp_growth_model_selection.py` | Python source code for regression modelling, exhaustive best subset selection, AIC/BIC comparison and prediction generation. |
+| `ex1_train.csv` | Training dataset used to estimate regression models and perform model selection. |
+| `ex1_test.csv` | Test dataset used to generate predictions from the selected model. |
+| `ex1_variables.csv` | Variable descriptions for the dataset's economic indicators. |
 
 ## Skills Demonstrated
 
@@ -82,7 +64,8 @@ The dataset is simulated, so the results do not establish how the selected model
 - Predictive performance evaluation
 - Python-based data analysis
 - Interpretation of statistical results
+- Analytical problem-solving
 
 ---
 
-*Academic project — Statistical Machine Learning, University of Glasgow.*
+*Academic project — Statistical Machine Learning (ECON5129), University of Glasgow.*
